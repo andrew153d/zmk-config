@@ -6,6 +6,11 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#define DEFAULT 0
+#define NUMPAD 1
+#define SYMBOLS 2
+#define NAV 3
+#define MEDIA 4
 
 / {
     combos {
@@ -20,7 +25,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEFAULT {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -35,7 +40,7 @@
             >;
         };
 
-        lower_layer {
+        NUMPAD {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -50,7 +55,7 @@
             >;
         };
 
-        raise_layer {
+        SYMBOLS {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -65,7 +70,7 @@
             >;
         };
 
-        layer_3 {
+        NAV {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -74,7 +79,7 @@
             >;
         };
 
-        layer_4 {
+        MEDIA {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
