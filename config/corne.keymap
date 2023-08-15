@@ -22,21 +22,30 @@
         combo_layer_3 {
             bindings = <&mo 3>;
             key-positions = <2 3>;
+            layers = <3 0>;
         };
 
         combo_layer_4 {
             bindings = <&mo 4>;
             key-positions = <3 4>;
+            layers = <4 0>;
         };
 
         combo_layer_5 {
             bindings = <&mo 5>;
             key-positions = <26 27>;
+            layers = <0 5>;
         };
 
         combo_caps_word {
             bindings = <&caps_word>;
             key-positions = <16 19>;
+        };
+
+        new_combo {
+            bindings = <&bt BT_CLR>;
+            key-positions = <6 7>;
+            layers = <5>;
         };
     };
 
