@@ -22,13 +22,13 @@
         combo_layer_3 {
             bindings = <&mo 3>;
             key-positions = <2 3>;
-            layers = <3 0>;
+            layers = <0 3>;
         };
 
         combo_layer_4 {
             bindings = <&mo 4>;
             key-positions = <3 4>;
-            layers = <4 0>;
+            layers = <0 4>;
         };
 
         combo_layer_5 {
