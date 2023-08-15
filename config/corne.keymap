@@ -12,7 +12,7 @@
 #define SYMBOLS 2
 #define NAV 3
 #define MEDIA 4
-#define BLUETOOTH
+#define BLUETOOTH 5
 
 / {
     combos {
