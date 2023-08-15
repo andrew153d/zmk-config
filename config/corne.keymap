@@ -20,12 +20,44 @@
 
         combo_layer_3 {
             bindings = <&mo 3>;
-            key-positions = <14 15>;
+            key-positions = <2 3>;
         };
 
         combo_layer_4 {
-            bindings = <&mo 3>;
-            key-positions = <15 16>;
+            bindings = <&mo 4>;
+            key-positions = <3 4>;
+        };
+
+        new_combo {
+            bindings = <&mo 5>;
+            key-positions = <26 27>;
+        };
+    };
+
+    macros {
+        right_desktop: right_desktop {
+            compatible = "zmk,behavior-macro";
+            label = "RIGHT_DESKTOP";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LGUI &kp LCTRL>;
+        };
+        left_desktop: left_desktop {
+            compatible = "zmk,behavior-macro";
+            label = "LEFT_DESKTOP";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LGUI &kp LCTRL>;
         };
     };
 
@@ -79,10 +111,10 @@
 
         NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans        &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &kp UP_ARROW     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &left_desktop        &trans  &right_desktop  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans  &kp UP_ARROW          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp LEFT      &kp DOWN       &kp RIGHT  &trans  &trans
+                        &trans  &trans  &trans    &trans         &trans        &trans
             >;
         };
 
