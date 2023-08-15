@@ -94,7 +94,7 @@
             >;
         };
 
-        layer_5 {
+        BLUETOOTH {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
