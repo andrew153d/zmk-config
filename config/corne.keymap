@@ -128,9 +128,9 @@
 
         NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &left_desktop        &trans  &right_desktop   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans  &kp UP_ARROW          &trans  &kp TAB  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp LEFT      &kp DOWN       &kp RIGHT   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &left_desktop  &kp UP_ARROW  &right_desktop   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp LEFT      &kp DOWN       &kp RIGHT  &kp TAB  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &none         &none           &none   &trans  &trans
                         &trans  &trans  &trans    &trans         &trans        &trans
             >;
         };
