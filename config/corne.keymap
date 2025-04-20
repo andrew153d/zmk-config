@@ -18,6 +18,7 @@
 #define MEDIA 4
 #define BLUETOOTH 5
 #define MOUSE 6
+#define MINECRAFT 7
 #define U_MOUSE_MOVE_MAX 1000                     /* <--- New max speed setting (default: 600) */
 
 #undef MOVE_UP
@@ -208,6 +209,15 @@
         };
 
         MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans       &mwh SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &mwh SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans            &trans          &trans          &trans           &kp PAGE_DOWN  &trans
+                        &trans  &trans  &mkp RCLK    &mkp LCLK         &trans          &trans
+            >;
+        };
+
+        MINECRAFT {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans       &mwh SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &mwh SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &trans
