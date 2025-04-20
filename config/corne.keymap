@@ -224,10 +224,10 @@
 
         MINECRAFT {
             bindings = <
-&none   &trans  &trans  &trans          &trans            &trans       &mwh SCROLL_UP    &trans            &mmv MOVE_UP    &trans           &trans         &trans
-&trans  &trans  &trans  &trans          &trans            &trans       &mwh SCROLL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &trans
-&none   &none   &none   &none           &none             &none        &none             &none             &none           &none            &none          &none
-                        &kp LEFT_SHIFT  &kp LEFT_CONTROL  &mkp LCLK    &mkp RCLK         &kp LEFT_CONTROL  &kp RIGHT_SHIFT
+&none   &trans  &trans          &trans          &trans            &trans       &mwh SCROLL_UP    &trans            &mmv MOVE_UP     &trans           &trans         &trans
+&none   &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &none        &msc SCRL_DOWN    &mmv MOVE_LEFT    &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none          &none
+&none   &none   &none           &none           &none             &none        &none             &none             &none            &none            &none          &none
+                                &kp LEFT_SHIFT  &kp LEFT_CONTROL  &mkp LCLK    &mkp RCLK         &kp LEFT_CONTROL  &kp RIGHT_SHIFT
             >;
         };
         
