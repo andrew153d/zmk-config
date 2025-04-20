@@ -91,6 +91,11 @@
             key-positions = <6 7>;
             layers = <5>;
         };
+
+        minecraft_layer {
+            bindings = <&tog 7>;
+            key-positions = <5 6>;
+        };
     };
 
     macros {
