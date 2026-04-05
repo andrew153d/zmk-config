@@ -194,9 +194,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans           &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans            &trans          &trans          &trans           &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans           &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans &trans            &trans          &trans          &trans           &kp PAGE_DOWN  &trans
                         &trans  &trans  &mkp RCLK    &mkp LCLK         &trans          &trans
             >;
         };
