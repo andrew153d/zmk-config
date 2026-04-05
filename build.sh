@@ -26,9 +26,9 @@ fi
 # Clone ZMK if it doesn't exist
 if [ ! -d "$SCRIPT_DIR/zmk" ]; then
     echo -e "${GREEN}Cloning ZMK repository...${NC}"
-    git clone https://github.com/ftc/zmk.git "$SCRIPT_DIR/zmk"
+    git clone https://github.com/zmkfirmware/zmk.git "$SCRIPT_DIR/zmk"
     cd "$SCRIPT_DIR/zmk"
-    git checkout mouse-ftc
+    git checkout main
     cd "$SCRIPT_DIR"
 else
     echo -e "${GREEN}ZMK repository already exists${NC}"
@@ -67,16 +67,16 @@ podman run -it --rm \
         
         # Build for corne_left
         echo -e '${GREEN}Building corne_left...${NC}'
-        west build -s app -b nice_nano_v2 -d build/left -- -DZMK_CONFIG=/workspaces/zmk-config/config -DSHIELD=corne_left
+        west build -s app -b nice_nano -d build/left -- -DZMK_CONFIG=/workspaces/zmk-config/config -DSHIELD=corne_left
         
         # Build for corne_right
         echo -e '${GREEN}Building corne_right...${NC}'
-        west build -s app -b nice_nano_v2 -d build/right -- -DZMK_CONFIG=/workspaces/zmk-config/config -DSHIELD=corne_right
+        west build -s app -b nice_nano -d build/right -- -DZMK_CONFIG=/workspaces/zmk-config/config -DSHIELD=corne_right
         
         echo -e '${BLUE}=== Copying firmware files ===${NC}'
         mkdir -p /workspaces/zmk-config/firmware
-        cp build/left/zephyr/zmk.uf2 /workspaces/zmk-config/firmware/corne_left-nice_nano_v2-zmk.uf2
-        cp build/right/zephyr/zmk.uf2 /workspaces/zmk-config/firmware/corne_right-nice_nano_v2-zmk.uf2
+        cp build/left/zephyr/zmk.uf2 /workspaces/zmk-config/firmware/corne_left-nice_nano-zmk.uf2
+        cp build/right/zephyr/zmk.uf2 /workspaces/zmk-config/firmware/corne_right-nice_nano-zmk.uf2
         
         echo -e '${GREEN}=== Build Complete! ===${NC}'
         echo -e 'Firmware files saved to: firmware/'
